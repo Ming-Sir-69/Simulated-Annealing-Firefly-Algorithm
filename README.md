@@ -138,10 +138,6 @@ The results of the simulations will provide insights into the optimal strategies
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Contact
 
 If you have any questions or suggestions, please feel free to contact me at [1254406948@qq.com].
