@@ -1,8 +1,4 @@
 # Research on Government Subsidies and Hydrogen Energy Supply Chain Based on Simulated Annealing Firefly Algorithm
-好的，这里是根据你的 GitHub 用户名和仓库名称更新的 Markdown 文件，用于在 GitHub 上介绍你的研究项目和软件：
-
-```markdown
-# Research on Government Subsidies and Hydrogen Energy Supply Chain Based on Simulated Annealing Firefly Algorithm
 
 ## Introduction
 
@@ -23,8 +19,6 @@ The Simulated Annealing Firefly Algorithm is used to find optimal solutions for 
 ## Project Structure
 
 The project is organized into the following directories and files:
-
-```
 
 ```
 模型函数/
@@ -66,7 +60,6 @@ The project is organized into the following directories and files:
 ├── 文件夹结构.txt
 └── README.md
 
-```
 ```
 
 ## Files Description
@@ -152,6 +145,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 If you have any questions or suggestions, please feel free to contact me at [1254406948@qq.com].
-```
-
-
