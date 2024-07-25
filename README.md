@@ -21,6 +21,7 @@ The Simulated Annealing Firefly Algorithm is used to find optimal solutions for 
 The project is organized into the following directories and files:
 
 ```
+
 模型函数/
 ├── model1/
 │   ├── __pycache__/
@@ -106,13 +107,13 @@ The project is organized into the following directories and files:
 
 ## How to Run
 
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/Ming-Sir-69/Simulated-Annealing-Firefly-Algorithm.git
-    cd Simulated-Annealing-Firefly-Algorithm
-    ```
+1. **Download the repository as a ZIP file**:
+    - Click the "Code" button on the repository page and select "Download ZIP".
 
-2. **Set up the Python environment**:
+2. **Extract the ZIP file**:
+    - Extract the contents to a desired location on your computer.
+
+3. **Set up the Python environment**:
     Ensure you have Python installed. Create a virtual environment and install the required packages.
     ```bash
     python -m venv env
@@ -120,19 +121,22 @@ The project is organized into the following directories and files:
     pip install -r requirements.txt  # Ensure you have a requirements.txt file with necessary packages
     ```
 
-3. **Run the Python scripts**:
-    ```bash
-    python model1/simulated_annealing_firefly_model1.py
-    python model2/simulated_annealing_firefly_model2.py
-    python model3/simulated_annealing_firefly_model3.py
-    ```
-
 4. **Run the MATLAB scripts**:
-    Open MATLAB and run the scripts `matlab_script_model1.m`, `matlab_script_model2.m`, and `matlab_script_model3.m` from their respective directories.
+    - Open MATLAB 2023b (or your installed version).
+    - Navigate to the directory containing the extracted files.
+    - Run the scripts `matlab_script_model1.m`, `matlab_script_model2.m`, and `matlab_script_model3.m` one by one.
 
 ## Results
 
 The results of the simulations will provide insights into the optimal strategies for hydrogen production and transportation under various subsidy policies. The project demonstrates the effectiveness of the Simulated Annealing Firefly Algorithm in optimizing complex supply chain problems.
+
+## PS
+
+**Note**: When running the MATLAB scripts, you may encounter an issue where running one script causes another to fail due to conflicts in the Python environment setup. To resolve this:
+- After running a MATLAB script, close the current MATLAB session.
+- Open a new MATLAB session and run the next script.
+
+This ensures that each script runs with a fresh Python environment setup.
 
 ## Contributing
 
@@ -140,4 +144,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Contact
 
-If you have any questions or suggestions, please feel free to contact me at [1254406948@qq.com].
+If you have any questions or suggestions, please feel free to contact me at [1254406948@qq.com](mailto:1254406948@qq.com).
