@@ -2,9 +2,13 @@
 
 def adaptive_cooling_rate(alpha, r_min, r_max, current_acceptance_rate, t, N, d, D_max):
     if current_acceptance_rate < r_min:
-        alpha *= 0.9999  # 增大 r_min 会减少冷却速率，温度下降更慢，迭代次数增加
+
+        #！！！ 增大 r_min 会减少冷却速率，温度下降更慢，迭代次数增加！！！
+        alpha *= 0.99995  
     elif current_acceptance_rate > r_max:
-        alpha *= 1.0001  # 减小 r_max 会增加冷却速率，温度下降更快，迭代次数减少
+        
+        # ！！！减小 r_max 会增加冷却速率，温度下降更快，迭代次数减少！！！
+        alpha *= 1.00005  
 
     # 动态调整冷却速率
     # t 与冷却速率成反比，t 增大冷却速率减少，温度下降更慢，迭代次数增加

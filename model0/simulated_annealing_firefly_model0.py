@@ -1,7 +1,7 @@
-# simulated_annealing_firefly_model2.py
+# simulated_annealing_firefly_model1.py
 
 import numpy as np
-from calculate_fitness_model2 import calculate_fitness_wrapper
+from calculate_fitness_model0 import calculate_fitness_wrapper
 from adaptive_initial_temperature import adaptive_initial_temperature
 from adaptive_cooling_rate import adaptive_cooling_rate
 from objective_function_health_check import check_health
@@ -48,6 +48,7 @@ def run_simulated_annealing_firefly(initial_solutions, params, T_0, alpha):
             if converged:
                 print(f"Iteration: {iteration}, Converged with Best Fitness: {best_fitness}")
                 break
+
         
         # 输出调试信息
         if iteration % 10 == 0:  # 每10次迭代输出调试信息
@@ -67,7 +68,7 @@ if __name__ == "__main__":
     T_0 = adaptive_initial_temperature(num_solutions, target_acceptance_rate, params)
     
     # 调用自适应冷却速率调整函数
-    alpha_0 = 0.995
+    alpha_0 = 0.95
     r_min = 0.1
     r_max = 0.9
     current_acceptance_rate = 0.5

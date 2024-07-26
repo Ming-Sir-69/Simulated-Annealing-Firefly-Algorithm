@@ -64,7 +64,11 @@ def adaptive_initial_temperature(num_solutions, target_acceptance_rate, params, 
 if __name__ == "__main__":
     from initialize_parameters import get_initial_parameters
     params = get_initial_parameters()
-    num_solutions = 50  # 增大 增加解的多样性，可能需要更多迭代来收敛
-    target_acceptance_rate = 0.66  # 增大  会接受更多较差解，温度增加，迭代次数增加
+
+    #！！！ 增大 增加解的多样性，可能需要更多迭代来收敛！！！
+    num_solutions = 100  
+    
+    #！！！ 增大  会接受更多较差解，温度增加，迭代次数增加！！！
+    target_acceptance_rate = 0.70  
     T_0 = adaptive_initial_temperature(num_solutions, target_acceptance_rate, params)
     print(f"Adjusted Initial Temperature: {T_0}")

@@ -21,8 +21,11 @@ def calculate_fitness(production_method, production_quantity, transport_method, 
     elif transport_method == 'LiquefiedTruck':
         transport_cost = params['unit_cost_liquefied'] * params['distance_liquefied'] * transport_quantity
 
+    # 计算补贴
+    subsidy = params['subsidy_amount'] * production_quantity
+
     # 计算总成本
-    total_cost = production_cost + transport_cost
+    total_cost = production_cost + transport_cost - subsidy
     
     return total_cost
 
@@ -40,9 +43,9 @@ if __name__ == "__main__":
     params = get_initial_parameters()
     initial_solution = {
         'production_method': 'Green',
-        'production_quantity': 500,
+        'production_quantity': 2250,
         'transport_method': 'Pipeline',
-        'transport_quantity': 300
+        'transport_quantity': 1350
     }
     fitness = calculate_fitness_wrapper(initial_solution, params)
     print(f"Initial Solution Fitness: {fitness}")

@@ -40,9 +40,7 @@ def get_initial_parameters():
         # 汽车运输的单位环境成本
         "unit_cost_environment_truck": 74,
         # 液氢罐车运输的单位环境成本
-        "unit_cost_environment_liquefied": 132,
-        # 直接资金补贴
-        "subsidy_amount": 10  # 例如每公斤补贴10元
+        "unit_cost_environment_liquefied": 132
     }
     return params
 

@@ -1,4 +1,4 @@
-# calculate_fitness_model2.py
+# calculate_fitness_model0.py
 
 def calculate_fitness(production_method, production_quantity, transport_method, transport_quantity, params):
     # 计算生产成本
@@ -24,10 +24,7 @@ def calculate_fitness(production_method, production_quantity, transport_method, 
     # 计算总成本
     total_cost = production_cost + transport_cost
     
-    # 计算分担后的成本
-    shared_cost = total_cost * (1 - params['cost_sharing_ratio'])
-    
-    return shared_cost
+    return total_cost
 
 def calculate_fitness_wrapper(solution, params):
     return calculate_fitness(

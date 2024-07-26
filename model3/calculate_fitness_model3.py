@@ -61,9 +61,9 @@ if __name__ == "__main__":
     params = get_initial_parameters()
     initial_solution = {
         'production_method': 'Green',
-        'production_quantity': 500,
+        'production_quantity': 2250,
         'transport_method': 'Pipeline',
-        'transport_quantity': 300
+        'transport_quantity': 1350
     }
     fitness = calculate_fitness_wrapper(initial_solution, params)
     print(f"Initial Solution Fitness: {fitness}")

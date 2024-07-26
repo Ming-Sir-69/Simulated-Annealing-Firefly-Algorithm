@@ -1,4 +1,4 @@
-% matlab_script_model2.m
+% matlab_script_model0.m
 
 % 设置Python环境
 pyenv('Version', 'D:\Program Files\Python311\python.exe');
@@ -33,14 +33,14 @@ fprintf('Adjusted Cooling Rate: %f\n', alpha);
 fitness_values = py.list();
 for i = 1:num_solutions
     solution = initial_solutions{i};
-    fitness = py.calculate_fitness_model2.calculate_fitness_wrapper(solution, params);
+    fitness = py.calculate_fitness_model0.calculate_fitness_wrapper(solution, params);
     fitness_values.append(fitness);
     solution_str = char(py.json.dumps(solution));  % 将solution转换为字符串
     fprintf('Solution %d: %s, Fitness: %f\n', i, solution_str, fitness);
 end
 
 % 调用模拟退火萤火虫算法文件
-optimal_solution = py.simulated_annealing_firefly_model2.run_simulated_annealing_firefly(initial_solutions, params, T_0, alpha);
+optimal_solution = py.simulated_annealing_firefly_model0.run_simulated_annealing_firefly(initial_solutions, params, T_0, alpha);
 disp('Optimal Solution:');
 disp(optimal_solution);
 
@@ -49,7 +49,7 @@ objective_values = py.list();  % 存储目标函数值
 num_iterations = int32(1000);  % 确保是整数类型
 
 % 计算当前最优解的适应度值
-current_fitness = py.calculate_fitness_model2.calculate_fitness_wrapper(optimal_solution, params);
+current_fitness = py.calculate_fitness_model0.calculate_fitness_wrapper(optimal_solution, params);
 
 for i = 1:num_iterations
     objective_values.append(current_fitness);

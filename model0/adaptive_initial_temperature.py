@@ -1,7 +1,7 @@
 # adaptive_initial_temperature.py
 
 import numpy as np
-from calculate_fitness_model1 import calculate_fitness
+from calculate_fitness_model0 import calculate_fitness
 
 def adaptive_initial_temperature(num_solutions, target_acceptance_rate, params, tolerance=0.01):
     initial_temperature = 1000  # 初始猜测的温度
