@@ -160,11 +160,9 @@ If you have any questions or suggestions, please feel free to contact me at [125
 
 好的，以下是包含GitHub常用表情包的更新版本说明：
 
-### 更新后的 README.md
+### 更新版本1.1
 
-#### 更新版本1.1
-
-##### 更新内容
+#### 更新内容
 - 修正并更新了模型1的计算公式，添加了 `subsidy_amount` 参数用于计算直接资金补贴。🚀
 - 数据修改过程：
   1. 在 `initialize_parameters.py` 中添加了 `subsidy_amount` 参数。📝
@@ -174,9 +172,9 @@ If you have any questions or suggestions, please feel free to contact me at [125
   2. 在 `calculate_fitness_model1.py` 中进行适应度计算时，确保正确使用补贴参数。✅
   3. 运行 `matlab_script_model1.m` 进行实验。🔍
 
-#### 更新版本1.2
+### 更新版本1.2
 
-##### 更新内容
+#### 更新内容
 - 加入了无补贴的对照组模型（model0）。🎉
 - model0的加入原因和作用：
   1. 对照组模型用于提供无补贴情况下的基准对比，以评估不同补贴政策的效果。📊
