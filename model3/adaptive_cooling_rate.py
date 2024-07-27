@@ -20,13 +20,13 @@ def adaptive_cooling_rate(alpha, r_min, r_max, current_acceptance_rate, t, N, d,
 
 if __name__ == "__main__":
     alpha_0 = 0.9  # 初始冷却速率
-    r_min = 0.1  # 增大 r_min 会减少冷却速率，温度下降更慢，迭代次数增加
-    r_max = 0.9  # 减小 r_max 会增加冷却速率，温度下降更快，迭代次数减少
+    r_min = 0.05  # 增大 r_min 会减少冷却速率，温度下降更慢，迭代次数增加
+    r_max = 0.95  # 减小 r_max 会增加冷却速率，温度下降更快，迭代次数减少
     current_acceptance_rate = 0.5
-    t = 10  # 增大 t 会减少冷却速率，温度下降更慢，迭代次数增加
-    N = 100  # 增大 N 会增加冷却速率，温度下降更快，迭代次数减少
-    d = 500  # 增大 d 会增加冷却速率，温度下降更快，迭代次数减少
-    D_max = 1000  # 增大 D_max 会减少冷却速率，温度下降更慢，迭代次数增加
+    t = 100  # 增大 t 会减少冷却速率，温度下降更慢，迭代次数增加
+    N = 1000  # 增大 N 会增加冷却速率，温度下降更快，迭代次数减少
+    d = 5000  # 增大 d 会增加冷却速率，温度下降更快，迭代次数减少
+    D_max = 10000  # 增大 D_max 会减少冷却速率，温度下降更慢，迭代次数增加
 
     alpha = adaptive_cooling_rate(alpha_0, r_min, r_max, current_acceptance_rate, t, N, d, D_max)
     print(f"Adjusted Cooling Rate: {alpha}")
