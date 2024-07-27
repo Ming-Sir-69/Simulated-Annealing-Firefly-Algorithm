@@ -7,6 +7,7 @@
 │   ├── generate_initial_solutions.py  # 生成初始解集
 │   ├── initialize_parameters.py  # 参数初始化
 │   ├── matlab_script_model0.m  # 适用于模型0的MATLAB脚本
+│   ├── matlab_script_model0_modified.m  # 适用于模型0的修改版MATLAB脚本
 │   ├── objective_function_health_check.py  # 目标函数健康检查
 │   └── simulated_annealing_firefly_model0.py  # 适用于模型0的模拟退火萤火虫算法文件
 ├── model1/  # 模型1专用文件夹
@@ -17,9 +18,9 @@
 │   ├── generate_initial_solutions.py  # 生成初始解集
 │   ├── initialize_parameters.py  # 参数初始化
 │   ├── matlab_script_model1.m  # 适用于模型1的MATLAB脚本
+│   ├── matlab_script_model1_modified.m  # 适用于模型1的修改版MATLAB脚本
 │   ├── objective_function_health_check.py  # 目标函数健康检查
 │   └── simulated_annealing_firefly_model1.py  # 适用于模型1的模拟退火萤火虫算法文件
-│
 ├── model2/  # 模型2专用文件夹
 │   ├── __pycache__/  # Python 缓存文件夹
 │   ├── adaptive_cooling_rate.py  # 自适应冷却速率调整
@@ -28,9 +29,9 @@
 │   ├── generate_initial_solutions.py  # 生成初始解集
 │   ├── initialize_parameters.py  # 参数初始化
 │   ├── matlab_script_model2.m  # 适用于模型2的MATLAB脚本
+│   ├── matlab_script_model2_modified.m  # 适用于模型2的修改版MATLAB脚本
 │   ├── objective_function_health_check.py  # 目标函数健康检查
 │   └── simulated_annealing_firefly_model2.py  # 适用于模型2的模拟退火萤火虫算法文件
-│
 ├── model3/  # 模型3专用文件夹
 │   ├── __pycache__/  # Python 缓存文件夹
 │   ├── adaptive_cooling_rate.py  # 自适应冷却速率调整
@@ -39,10 +40,20 @@
 │   ├── generate_initial_solutions.py  # 生成初始解集
 │   ├── initialize_parameters.py  # 参数初始化
 │   ├── matlab_script_model3.m  # 适用于模型3的MATLAB脚本
+│   ├── matlab_script_model3_modified.m  # 适用于模型3的修改版MATLAB脚本
 │   ├── objective_function_health_check.py  # 目标函数健康检查
 │   └── simulated_annealing_firefly_model3.py  # 适用于模型3的模拟退火萤火虫算法文件
-│
 ├── 初始值.md  # 初始值说明文档
 ├── 清空命令窗口.m  # 清空命令窗口的MATLAB脚本
 ├── 文件夹结构.txt  # 文件夹结构说明文件
-└── README.md  # 项目介绍文档
+|── README.md  # 项目介绍文档
+├── 实验数据/
+│   ├──model0/
+│       ├── optimal_solutions/
+│   ├──model1/
+│       ├── optimal_solutions/
+│   ├──model2/
+│       ├── optimal_solutions/
+|   └──model3/
+└       └── optimal_solutions/
+
