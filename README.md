@@ -167,17 +167,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 If you have any questions or suggestions, please feel free to contact me at [1254406948@qq.com](mailto:1254406948@qq.com).
 
-### 更新版本1.1
-
-#### 更新内容
-- 修正并更新了模型1的计算公式，添加了 `subsidy_amount` 参数用于计算直接资金补贴。🚀
-- 数据修改过程：
-  1. 在 `initialize_parameters.py` 中添加了 `subsidy_amount` 参数。📝
-  2. 在 `calculate_fitness_model1.py` 中使用 `subsidy_amount` 参数计算补贴并更新适应度计算函数。🔄
-- 使用方法：
-  1. 确保所有参数已在 `initialize_parameters.py` 中初始化。📂
-  2. 在 `calculate_fitness_model1.py` 中进行适应度计算时，确保正确使用补贴参数。✅
-  3. 运行 `matlab_script_model1.m` 进行实验。🔍
 
 ### Update Version 1.1
 
