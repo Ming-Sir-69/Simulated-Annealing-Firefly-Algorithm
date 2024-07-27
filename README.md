@@ -31,9 +31,9 @@ The project is organized into the following directories and files:
 │   ├── generate_initial_solutions.py  # 生成初始解集
 │   ├── initialize_parameters.py  # 参数初始化
 │   ├── matlab_script_model0.m  # 适用于模型0的MATLAB脚本
+│   ├── matlab_script_model0_modified.m  # 适用于模型0的修改版MATLAB脚本
 │   ├── objective_function_health_check.py  # 目标函数健康检查
 │   └── simulated_annealing_firefly_model0.py  # 适用于模型0的模拟退火萤火虫算法文件
-│
 ├── model1/  # 模型1专用文件夹
 │   ├── __pycache__/  # Python 缓存文件夹
 │   ├── adaptive_cooling_rate.py  # 自适应冷却速率调整
@@ -42,9 +42,9 @@ The project is organized into the following directories and files:
 │   ├── generate_initial_solutions.py  # 生成初始解集
 │   ├── initialize_parameters.py  # 参数初始化
 │   ├── matlab_script_model1.m  # 适用于模型1的MATLAB脚本
+│   ├── matlab_script_model1_modified.m  # 适用于模型1的修改版MATLAB脚本
 │   ├── objective_function_health_check.py  # 目标函数健康检查
 │   └── simulated_annealing_firefly_model1.py  # 适用于模型1的模拟退火萤火虫算法文件
-│
 ├── model2/  # 模型2专用文件夹
 │   ├── __pycache__/  # Python 缓存文件夹
 │   ├── adaptive_cooling_rate.py  # 自适应冷却速率调整
@@ -53,9 +53,9 @@ The project is organized into the following directories and files:
 │   ├── generate_initial_solutions.py  # 生成初始解集
 │   ├── initialize_parameters.py  # 参数初始化
 │   ├── matlab_script_model2.m  # 适用于模型2的MATLAB脚本
+│   ├── matlab_script_model2_modified.m  # 适用于模型2的修改版MATLAB脚本
 │   ├── objective_function_health_check.py  # 目标函数健康检查
 │   └── simulated_annealing_firefly_model2.py  # 适用于模型2的模拟退火萤火虫算法文件
-│
 ├── model3/  # 模型3专用文件夹
 │   ├── __pycache__/  # Python 缓存文件夹
 │   ├── adaptive_cooling_rate.py  # 自适应冷却速率调整
@@ -64,13 +64,22 @@ The project is organized into the following directories and files:
 │   ├── generate_initial_solutions.py  # 生成初始解集
 │   ├── initialize_parameters.py  # 参数初始化
 │   ├── matlab_script_model3.m  # 适用于模型3的MATLAB脚本
+│   ├── matlab_script_model3_modified.m  # 适用于模型3的修改版MATLAB脚本
 │   ├── objective_function_health_check.py  # 目标函数健康检查
 │   └── simulated_annealing_firefly_model3.py  # 适用于模型3的模拟退火萤火虫算法文件
-│
 ├── 初始值.md  # 初始值说明文档
 ├── 清空命令窗口.m  # 清空命令窗口的MATLAB脚本
 ├── 文件夹结构.txt  # 文件夹结构说明文件
-└── README.md  # 项目介绍文档
+|── README.md  # 项目介绍文档
+├── 实验数据/
+│   ├──model0/
+│       ├── optimal_solutions/
+│   ├──model1/
+│       ├── optimal_solutions/
+│   ├──model2/
+│       ├── optimal_solutions/
+|   └──model3/
+└       └── optimal_solutions/
 
 
 ```
@@ -158,8 +167,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 If you have any questions or suggestions, please feel free to contact me at [1254406948@qq.com](mailto:1254406948@qq.com).
 
-好的，以下是包含GitHub常用表情包的更新版本说明：
-
 ### 更新版本1.1
 
 #### 更新内容
@@ -172,14 +179,42 @@ If you have any questions or suggestions, please feel free to contact me at [125
   2. 在 `calculate_fitness_model1.py` 中进行适应度计算时，确保正确使用补贴参数。✅
   3. 运行 `matlab_script_model1.m` 进行实验。🔍
 
-### 更新版本1.2
+### Update Version 1.1
 
-#### 更新内容
-- 加入了无补贴的对照组模型（model0）。🎉
-- model0的加入原因和作用：
-  1. 对照组模型用于提供无补贴情况下的基准对比，以评估不同补贴政策的效果。📊
-  2. 通过与补贴模型对比，分析补贴对氢能供应链成本的影响，找出最优的补贴政策和方案。🔬
-- 使用方法：
-  1. 在 `initialize_parameters.py` 中初始化所有参数。📂
-  2. 使用 `calculate_fitness_model0.py` 进行适应度计算，该文件不考虑任何补贴，仅计算生产成本和运输成本的总和。🔄
-  3. 运行 `matlab_script_model0.m` 进行实验，获得无补贴情况下的基准数据。🔍
+#### Update Content
+- Corrected and updated the calculation formula for Model 1, adding the `subsidy_amount` parameter for calculating direct financial subsidies. 🚀
+- Data modification process:
+  1. Added the `subsidy_amount` parameter in `initialize_parameters.py`. 📝
+  2. Used the `subsidy_amount` parameter in `calculate_fitness_model1.py` to calculate subsidies and updated the fitness calculation function. 🔄
+- Usage:
+  1. Ensure all parameters are initialized in `initialize_parameters.py`. 📂
+  2. When performing fitness calculations in `calculate_fitness_model1.py`, ensure the subsidy parameter is used correctly. ✅
+  3. Run `matlab_script_model1.m` to conduct the experiment. 🔍
+
+### Update Version 1.2
+
+#### Update Content
+- Added a control group model without subsidies (Model 0). 🎉
+- Reasons and functions of adding Model 0:
+  1. The control group model provides a baseline comparison without subsidies to evaluate the effects of different subsidy policies. 📊
+  2. By comparing with the subsidy models, analyze the impact of subsidies on the cost of the hydrogen supply chain to identify the optimal subsidy policies and plans. 🔬
+- Usage:
+  1. Initialize all parameters in `initialize_parameters.py`. 📂
+  2. Use `calculate_fitness_model0.py` for fitness calculation, which does not consider any subsidies, only calculating the total production and transportation costs. 🔄
+  3. Run `matlab_script_model0.m` to conduct the experiment and obtain baseline data without subsidies. 🔍
+
+### Update Version 1.3
+
+#### Update Content
+- Corrected and updated the calculation formulas for Models 0, 1, and 2 to ensure correct extraction of `production_quantity` and `distance_pipeline` parameters from `params`. 🔧
+- Optimized the result saving paths and file naming formats to ensure correct saving of experimental data and optimal solution tables. 📁
+- Data modification process:
+  1. Defined initial production quantity and pipeline transportation distance in `initialize_parameters.py` and calculated other related parameters based on proportions. 📝
+  2. Ensured consistent parameter sources in the fitness calculation files for each model (`calculate_fitness_model0.py`, `calculate_fitness_model1.py`, `calculate_fitness_model2.py`). 🔄
+  3. Modified the relevant MATLAB script files (`matlab_script_model0_modified.m`, `matlab_script_model1_modified.m`, `matlab_script_model2_modified.m`) to ensure correct extraction and use of parameters, and optimized the result saving paths and file naming formats. 🔍
+  4. Updated the file structure.
+
+- Usage:
+  1. Ensure all parameters are initialized in `initialize_parameters.py`. 📂
+  2. When performing fitness calculations in the fitness calculation files for each model, ensure the parameters are used correctly. ✅
+  3. Run the corresponding MATLAB script files to conduct experiments and obtain experimental data and optimal solution tables for each model. 📊
